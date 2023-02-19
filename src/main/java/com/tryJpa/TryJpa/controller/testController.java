@@ -19,6 +19,7 @@ public class testController {
 
     @GetMapping("/")
     public String hello(){
+        System.out.println("111");
         return "hello world";
     }
 
