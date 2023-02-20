@@ -17,11 +17,11 @@ public class testController {
         this.test = test;
     }
 
-    @GetMapping("/")
-    public String hello(){
-        System.out.println("111");
-        return "hello world";
-    }
+//    @GetMapping("/")
+//    public String hello(){
+//        System.out.println("111");
+//        return "hello world";
+//    }
 
     @GetMapping("/all")
     public Collection<account> getAll(){
