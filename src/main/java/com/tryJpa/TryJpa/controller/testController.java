@@ -1,6 +1,7 @@
 package com.tryJpa.TryJpa.controller;
 
-import com.tryJpa.TryJpa.model.account;
+import com.tryJpa.TryJpa.model.Account;
+import com.tryJpa.TryJpa.model.AccountRepository;
 import com.tryJpa.TryJpa.model.testRepository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,9 +12,9 @@ import java.util.Collection;
 public class testController {
 //    @Autowired
 //    private testRepository test;
-    private final testRepository test;
+    private final AccountRepository test;
 
-    public testController(testRepository test) {
+    public testController(AccountRepository test) {
         this.test = test;
     }
 
@@ -24,7 +25,7 @@ public class testController {
 //    }
 
     @GetMapping("/all")
-    public Collection<account> getAll(){
+    public Collection<Account> getAll(){
         return test.findAll();
     }
 }
